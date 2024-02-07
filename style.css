@@ -8,17 +8,20 @@
 .container {
   width: 100%;
   min-height: 100vh;
-  background-image: linear-gradient(to right, #02AAB0 0%, #00CDAC 51%, #02AAB0 100%);
   padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
 }
+
 .todo-app {
-  width: 90%;
-  max-width: 540px;
-  background-color: #fff;
-  margin: 100px auto 20px;
-  padding: 40px 30px 70px;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+  width: 100%;
+  max-width: 540px; 
+  margin: 20px;
+  padding: 20px;
 }
+
 .todo-app h2 {
   color: #002765;
   display: flex;
@@ -26,20 +29,21 @@
   margin-bottom: 10px;
   justify-content: center;
 }
+
 .todo-app h2 img {
   width: 50px;
   margin-left: 10px;
   height: 50px;
 }
+
 .row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #edeef0;
-  justify-content: center;
   border-radius: 30px;
-  padding-left: 20px;
-  margin-bottom: 25px;
+  padding: 10px;
+  margin-bottom: 15px;
 }
 
 input {
@@ -49,17 +53,20 @@ input {
   background: transparent;
   padding: 10px;
 }
+
 button {
   border: none;
   outline: none;
-  padding: 16px 50px;
+  padding: 16px 30px;
   background-image: linear-gradient(to right, #02AAB0 0%, #00CDAC 51%, #02AAB0 100%);
   transition: 0.5s;
   color: #fff;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
   border-radius: 40px;
+  width: max-content;
 }
+
 ul li {
   list-style: none;
   font-size: 17px;
@@ -68,6 +75,7 @@ ul li {
   cursor: pointer;
   position: relative;
 }
+
 ul li::before {
   content: '';
   position: absolute;
@@ -80,6 +88,7 @@ ul li::before {
   top: 10px;
   left: 8px;
 }
+
 ul li.checked {
   color: #555;
   text-decoration: line-through;
@@ -87,7 +96,7 @@ ul li.checked {
 
 ul li.checked::before {
   content: '';
-  background: url('./4.png') no-repeat; 
+  background: url('./4.png') no-repeat;
   position: absolute;
   height: 28px;
   width: 28px;
@@ -97,6 +106,7 @@ ul li.checked::before {
   top: 12px;
   left: 8px;
 }
+
 ul li span {
   position: absolute;
   right: 0;
@@ -108,86 +118,12 @@ ul li span {
   line-height: 40px;
   text-align: center;
 }
+
 ul li span:hover {
   background: #edeef0;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 body {
   font-family: Arial, sans-serif;
   background-color: #f8f8f8;
-}
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-.todo-app {
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  width: 80%;
-  max-width: 400px;
-}
-.todo-app h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-}
-.row {
-  display: flex;
-  gap: 10px;
-}
-
-#input-box {
-  flex-grow: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-button {
-  background-color: #007bff;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 15px;
-  cursor: pointer;
-}
-
-#list-container {
-  list-style: none;
-  margin-top: 20px;
-}
-
-#list-container li {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-/* Add hover effect for list items */
-#list-container li:hover {
-  background-color: #f5f5f5;
-}
-@media (max-width: 768px) {
-  .todo-app {
-      width: 90%;
-      max-width: 100%;
-      padding: 20px;
-  }
-}
-@media (min-width:340px) {
- .todo-app{
-  width: 80%;
-  max-width: 85%;
-  padding: 5px;
- } 
-  
 }
